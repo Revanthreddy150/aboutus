@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About the Inventors & Projects | USEAS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
     <style>
@@ -14,16 +14,12 @@
             --card-border: rgba(255, 255, 255, 0.98);
             --text-dark: #1e293b;
             --text-muted: #64748b;
-            --gold-lightest: #fff9db;
-            --gold-light: #f59e0b;
-            --gold-primary: #d97706;
-            --gold-dark: #92400e;
-            --gold-gradient: linear-gradient(135deg, #fbbf24 0%, #d97706 60%, #b45309 100%);
-            --gold-border: rgba(217, 119, 6, 0.45);
-            --gold-glow: rgba(217, 119, 6, 0.25);
             --primary-purple: #6c5ce7;
             --primary-light: #a29bfe;
             --badge-bg: #eef2ff;
+            --purple-border: rgba(108, 92, 231, 0.35);
+            --purple-glow: rgba(108, 92, 231, 0.2);
+            --purple-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
         }
 
         * {
@@ -65,7 +61,7 @@
         .glow-2 {
             width: 450px;
             height: 450px;
-            background: #fef3c7;
+            background: #ede9fe;
             top: 40%;
             right: 5%;
         }
@@ -89,7 +85,7 @@
         .top-heading h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-purple) 0%, var(--primary-light) 100%);
+            background: var(--purple-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -1.5px;
@@ -126,7 +122,7 @@
             box-shadow: 0 20px 50px rgba(108, 92, 231, 0.08);
             cursor: pointer;
             user-select: none;
-            border: 2px solid rgba(217, 119, 6, 0.25);
+            border: 2px solid var(--purple-border);
         }
 
         .card-3d::after {
@@ -134,7 +130,7 @@
             position: absolute;
             inset: -3px;
             border-radius: 28px;
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             z-index: -1;
             opacity: 0.3;
             transition: opacity 0.5s ease;
@@ -145,8 +141,8 @@
             opacity: 1;
             z-index: 10;
             filter: blur(0px) brightness(1);
-            border-color: var(--gold-primary);
-            box-shadow: 0 30px 65px rgba(217, 119, 6, 0.25);
+            border-color: var(--primary-purple);
+            box-shadow: 0 30px 65px var(--purple-glow);
         }
 
         .card-3d.active::after {
@@ -170,20 +166,20 @@
         .photo-stage {
             width: 100%;
             flex: 1;
-            background: #f8fafc;
+            background: var(--badge-bg);
             border-radius: 20px;
             overflow: hidden;
             position: relative;
-            border: 1.5px solid var(--gold-border);
+            border: 1.5px solid var(--purple-border);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 0 15px rgba(108, 92, 231, 0.05);
         }
 
         .photo-stage i {
             font-size: 6rem;
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: transform 0.6s ease;
@@ -201,7 +197,7 @@
         .dev-name {
             font-size: 1.45rem;
             font-weight: 800;
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 2px;
@@ -210,7 +206,7 @@
 
         .dev-role {
             font-size: 0.82rem;
-            color: var(--gold-dark);
+            color: var(--primary-purple);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -228,8 +224,8 @@
             height: 38px;
             border-radius: 12px;
             background: #ffffff;
-            border: 1.5px solid var(--gold-border);
-            color: var(--gold-dark);
+            border: 1.5px solid var(--purple-border);
+            color: var(--primary-purple);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -240,11 +236,11 @@
         }
 
         .social-btn:hover {
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             color: #ffffff;
-            border-color: var(--gold-primary);
+            border-color: var(--primary-purple);
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 6px 16px var(--gold-glow);
+            box-shadow: 0 6px 16px var(--purple-glow);
         }
 
         .timeline-controls {
@@ -262,16 +258,16 @@
             height: 12px;
             border-radius: 50px;
             background: #cbd5e1;
-            border: 1px solid rgba(217, 119, 6, 0.3);
+            border: 1px solid var(--purple-border);
             transition: all 0.5s ease;
             cursor: pointer;
         }
 
         .timeline-dot.active {
             width: 38px;
-            background: var(--gold-gradient);
-            border-color: var(--gold-primary);
-            box-shadow: 0 2px 10px var(--gold-glow);
+            background: var(--purple-gradient);
+            border-color: var(--primary-purple);
+            box-shadow: 0 2px 10px var(--purple-glow);
         }
 
         .founders-panel {
@@ -294,7 +290,7 @@
             align-items: center;
             gap: 8px;
             background: var(--badge-bg);
-            border: 1px solid rgba(108, 92, 231, 0.2);
+            border: 1.5px solid var(--purple-border);
             color: var(--primary-purple);
             padding: 8px 22px;
             border-radius: 100px;
@@ -335,8 +331,8 @@
         }
 
         .skill-pill:hover {
-            border-color: var(--gold-primary);
-            color: var(--gold-dark);
+            border-color: var(--primary-purple);
+            color: var(--primary-purple);
             transform: translateY(-2px);
         }
 
@@ -354,7 +350,7 @@
         }
 
         .section-header h4 {
-            color: var(--gold-primary);
+            color: var(--primary-purple);
             text-transform: uppercase;
             letter-spacing: 4px;
             font-weight: 700;
@@ -397,15 +393,15 @@
             left: 0;
             width: 100%;
             height: 3px;
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            border-color: var(--gold-border);
-            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.12);
+            border-color: var(--purple-border);
+            box-shadow: 0 25px 50px var(--purple-glow);
         }
 
         .project-card:hover::before {
@@ -423,13 +419,13 @@
             width: 52px;
             height: 52px;
             border-radius: 14px;
-            background: rgba(217, 119, 6, 0.1);
-            border: 1.5px solid var(--gold-border);
+            background: var(--badge-bg);
+            border: 1.5px solid var(--purple-border);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.3rem;
-            color: var(--gold-dark);
+            color: var(--primary-purple);
         }
 
         .status-badge {
@@ -445,9 +441,9 @@
         }
 
         .status-badge.live {
-            background: rgba(217, 119, 6, 0.12);
-            color: var(--gold-dark);
-            border: 1px solid var(--gold-border);
+            background: var(--badge-bg);
+            color: var(--primary-purple);
+            border: 1px solid var(--purple-border);
         }
 
         .status-badge.progress {
@@ -492,14 +488,14 @@
         }
 
         .project-btn.active-link {
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             color: #ffffff;
-            box-shadow: 0 6px 18px var(--gold-glow);
+            box-shadow: 0 6px 18px var(--purple-glow);
         }
 
         .project-btn.active-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 24px rgba(217, 119, 6, 0.4);
+            box-shadow: 0 10px 24px rgba(108, 92, 231, 0.4);
         }
 
         .project-btn.disabled-btn {
@@ -515,21 +511,21 @@
             position: relative;
             z-index: 2;
             background: var(--card-surface);
-            border: 1.5px solid var(--gold-border);
+            border: 1.5px solid var(--purple-border);
             border-radius: 30px;
             padding: 45px 30px;
             text-align: center;
             backdrop-filter: blur(25px);
-            box-shadow: 0 25px 60px rgba(217, 119, 6, 0.1);
+            box-shadow: 0 25px 60px var(--purple-glow);
         }
 
         .cta-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(217, 119, 6, 0.12);
-            border: 1px solid var(--gold-border);
-            color: var(--gold-dark);
+            background: var(--badge-bg);
+            border: 1px solid var(--purple-border);
+            color: var(--primary-purple);
             padding: 6px 18px;
             border-radius: 100px;
             font-size: 0.82rem;
@@ -559,7 +555,7 @@
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: var(--gold-gradient);
+            background: var(--purple-gradient);
             color: #ffffff;
             padding: 14px 38px;
             border-radius: 14px;
@@ -567,13 +563,13 @@
             font-size: 1.05rem;
             text-decoration: none;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 28px var(--gold-glow);
+            box-shadow: 0 10px 28px var(--purple-glow);
             letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
             transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 15px 38px rgba(217, 119, 6, 0.45);
+            box-shadow: 0 15px 38px rgba(108, 92, 231, 0.45);
         }
 
         footer {
